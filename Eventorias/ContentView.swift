@@ -1,11 +1,5 @@
-//
-//  ContentView.swift
-//  Eventorias
-//
-//  Created by Johan Trino on 06/03/2026.
-//
-
 import SwiftUI
+
 
 struct ContentView: View {
     var body: some View {
