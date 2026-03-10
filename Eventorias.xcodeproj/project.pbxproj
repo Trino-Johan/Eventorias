@@ -37,20 +37,47 @@
 		4840707D2F5DDFAF004447FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		487B78092F5FB42600AF9818 /* Exceptions for "Tests" folder in "Eventorias" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				EventoriasTests/EventoriasTests.swift,
+				EventoriasUITests/EventoriasUITests.swift,
+				EventoriasUITests/EventoriasUITestsLaunchTests.swift,
+			);
+			target = 483253052F5B257400EF8BB2 /* Eventorias */;
+		};
+		487B780A2F5FB42600AF9818 /* Exceptions for "Tests" folder in "EventoriasTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				EventoriasTests/EventoriasTests.swift,
+			);
+			target = 483253122F5B257600EF8BB2 /* EventoriasTests */;
+		};
+		487B78102F5FB42800AF9818 /* Exceptions for "Tests" folder in "EventoriasUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				EventoriasUITests/EventoriasUITests.swift,
+				EventoriasUITests/EventoriasUITestsLaunchTests.swift,
+			);
+			target = 4832531C2F5B257600EF8BB2 /* EventoriasUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		483253082F5B257400EF8BB2 /* Eventorias */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Eventorias;
 			sourceTree = "<group>";
 		};
-		483253162F5B257600EF8BB2 /* EventoriasTests */ = {
+		487B78052F5FB42100AF9818 /* Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EventoriasTests;
-			sourceTree = "<group>";
-		};
-		483253202F5B257600EF8BB2 /* EventoriasUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EventoriasUITests;
+			exceptions = (
+				487B78092F5FB42600AF9818 /* Exceptions for "Tests" folder in "Eventorias" target */,
+				487B780A2F5FB42600AF9818 /* Exceptions for "Tests" folder in "EventoriasTests" target */,
+				487B78102F5FB42800AF9818 /* Exceptions for "Tests" folder in "EventoriasUITests" target */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -86,10 +113,9 @@
 		483252FD2F5B257400EF8BB2 = {
 			isa = PBXGroup;
 			children = (
+				487B78052F5FB42100AF9818 /* Tests */,
 				4840707D2F5DDFAF004447FF /* GoogleService-Info.plist */,
 				483253082F5B257400EF8BB2 /* Eventorias */,
-				483253162F5B257600EF8BB2 /* EventoriasTests */,
-				483253202F5B257600EF8BB2 /* EventoriasUITests */,
 				483253072F5B257400EF8BB2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +147,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				483253082F5B257400EF8BB2 /* Eventorias */,
+				487B78052F5FB42100AF9818 /* Tests */,
 			);
 			name = Eventorias;
 			packageProductDependencies = (
@@ -145,9 +172,6 @@
 			dependencies = (
 				483253152F5B257600EF8BB2 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				483253162F5B257600EF8BB2 /* EventoriasTests */,
-			);
 			name = EventoriasTests;
 			packageProductDependencies = (
 			);
@@ -167,9 +191,6 @@
 			);
 			dependencies = (
 				4832531F2F5B257600EF8BB2 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				483253202F5B257600EF8BB2 /* EventoriasUITests */,
 			);
 			name = EventoriasUITests;
 			packageProductDependencies = (
@@ -419,6 +440,8 @@
 				DEVELOPMENT_TEAM = 3N9T5X39D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Cette application a besoin de l'appareil photo pour illustrer vos événements.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Cette application a besoin d'accéder à vos photos pour importer des images d'événements.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,6 +474,8 @@
 				DEVELOPMENT_TEAM = 3N9T5X39D7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Cette application a besoin de l'appareil photo pour illustrer vos événements.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Cette application a besoin d'accéder à vos photos pour importer des images d'événements.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

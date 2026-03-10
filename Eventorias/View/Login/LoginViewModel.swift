@@ -1,6 +1,6 @@
 import Foundation
-import Combine
 import FirebaseAuth
+import Combine
 
 class LoginViewModel: ObservableObject {
     @Published var email = ""
@@ -10,20 +10,36 @@ class LoginViewModel: ObservableObject {
     @Published var showError = false
     @Published var showLoginForm = false
     
+    var authManager = AuthManager()
+    
     func login() {
-        isLoading = true // le spinner
-        errorMessage = "" // réinitialise les erreurs
+        isLoading = true
+        errorMessage = ""
         
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            // C'est ici que Firebase répond
-            self.isLoading = false // Arrête le spinner dans tous les cas
-            
-            if let error = error {
-                self.errorMessage = error.localizedDescription
-                self.showError = true
-            } else {
-                print("User found : \(result?.user.uid ?? "")")
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+            DispatchQueue.main.async {
+                self?.isLoading = false
+                if let error = error {
+                    self?.errorMessage = error.localizedDescription
+                    self?.showError = true
+                }
             }
+        }
+    }
+    
+    func signUp(name: String) {
+        guard !email.isEmpty, !password.isEmpty, !name.isEmpty else {
+            self.errorMessage = "Please fill all fields"
+            self.showError = true
+            return
+        }
+        
+        isLoading = true
+        authManager.signUp(email: email, password: password, name: name)
+        
+        // Sécurité : on repasse isLoading à false après un délai si l'AuthManager ne le fait pas
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.isLoading = false
         }
     }
 }
