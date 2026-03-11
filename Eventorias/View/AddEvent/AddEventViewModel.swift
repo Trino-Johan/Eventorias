@@ -42,7 +42,11 @@ class AddEventViewModel: ObservableObject {
 
     // Enrigistre l'evenement
     func saveEvent(completion: @escaping (Bool) -> Void) {
-        guard !name.isEmpty else { return }
+        guard !name.isEmpty else {
+                completion(false)
+            
+                return
+            }
         self.isLoading = true
         
         let request = MKLocalSearch.Request()

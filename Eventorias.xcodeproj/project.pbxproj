@@ -41,16 +41,25 @@
 		487B78092F5FB42600AF9818 /* Exceptions for "Tests" folder in "Eventorias" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				EventoriasTests/EventoriasTests.swift,
+				EventoriasTests/AddEventViewModelTests.swift,
+				EventoriasTests/AuthManagerTests.swift,
+				EventoriasTests/EventsViewModelTests.swift,
+				EventoriasTests/LoginViewModelTests.swift,
+				EventoriasTests/ModelsTests.swift,
+				EventoriasTests/ProfileViewModelTests.swift,
 				EventoriasUITests/EventoriasUITests.swift,
-				EventoriasUITests/EventoriasUITestsLaunchTests.swift,
 			);
 			target = 483253052F5B257400EF8BB2 /* Eventorias */;
 		};
 		487B780A2F5FB42600AF9818 /* Exceptions for "Tests" folder in "EventoriasTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				EventoriasTests/EventoriasTests.swift,
+				EventoriasTests/AddEventViewModelTests.swift,
+				EventoriasTests/AuthManagerTests.swift,
+				EventoriasTests/EventsViewModelTests.swift,
+				EventoriasTests/LoginViewModelTests.swift,
+				EventoriasTests/ModelsTests.swift,
+				EventoriasTests/ProfileViewModelTests.swift,
 			);
 			target = 483253122F5B257600EF8BB2 /* EventoriasTests */;
 		};
@@ -58,7 +67,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				EventoriasUITests/EventoriasUITests.swift,
-				EventoriasUITests/EventoriasUITestsLaunchTests.swift,
 			);
 			target = 4832531C2F5B257600EF8BB2 /* EventoriasUITests */;
 		};
@@ -113,8 +121,8 @@
 		483252FD2F5B257400EF8BB2 = {
 			isa = PBXGroup;
 			children = (
-				487B78052F5FB42100AF9818 /* Tests */,
 				4840707D2F5DDFAF004447FF /* GoogleService-Info.plist */,
+				487B78052F5FB42100AF9818 /* Tests */,
 				483253082F5B257400EF8BB2 /* Eventorias */,
 				483253072F5B257400EF8BB2 /* Products */,
 			);

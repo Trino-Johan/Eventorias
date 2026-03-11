@@ -15,6 +15,7 @@ class LoginViewModel: ObservableObject {
     func login() {
         isLoading = true
         errorMessage = ""
+        showError = false
         
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
             DispatchQueue.main.async {
